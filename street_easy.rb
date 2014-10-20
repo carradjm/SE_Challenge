@@ -74,7 +74,7 @@ sales = StreetEasy.new('sales', 'soho').build_output
 rentals = StreetEasy.new('rentals', 'soho').build_output
 
 # Will write the returned output from the api to a file named
-# 'output.json' on the desktop
+# 'output.json' into the folder from which you ran the script.
 
 File.open("output.json","w") do |file|
   file.write(sales.merge!(rentals).to_json)
